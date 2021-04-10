@@ -9,11 +9,24 @@ namespace RaffleGUI.Model
         private readonly Random ranNumGen;
         private readonly DataTable playNums;
 
+        public DataTable PlayNums
+        {
+            get
+            {
+                return playNums;
+            }
+        }
+
+
+
+
         public RaffleManager()
         {
             ranNumGen = new Random();
             playNums = new DataTable();
             playNums.Columns.Add(new DataColumn("Numeros Jugando"));
+            playNums.Columns["Numeros Jugando"].DataType = typeof(Int32);
+            playNums.PrimaryKey = new DataColumn[] { playNums.Columns["Numeros Jugando"] };
         }
 
         public bool AddNumber(int num)
@@ -23,14 +36,38 @@ namespace RaffleGUI.Model
             DataRowCollection rows = playNums.Rows;
             int rowsLength = rows.Count;
             if (preRow == null)
-            {
+            {                
                 int index = BinarySearchTravelDataRowCollection(rows, num, 0, rowsLength, rowsLength / 2);
-
+                
                 DataRow newRow = playNums.NewRow();
                 newRow["Numeros Jugando"] = num;
-
-                playNums.Rows.InsertAt(newRow, index);
-
+                if (playNums.Rows.Count > 0)
+                {
+                    //If the number in the index is less than the number to add
+                    //then insert it in the next position, else insert it at the index
+                    //if the next position does not exist add it after the last element
+                    if ((int)rows[index][0] < num)
+                    {
+                        //If index is not the last position then insert it in the position after index
+                        if (index != rows.Count - 1)
+                        {
+                            playNums.Rows.InsertAt(newRow, index + 1);
+                        }
+                        //Else add it at the end
+                        else
+                        {
+                            playNums.Rows.Add(newRow);
+                        }
+                    }
+                    else
+                    {
+                        playNums.Rows.InsertAt(newRow, index);
+                    }
+                }
+                else
+                {
+                    playNums.Rows.Add(newRow);
+                }
                 return true;
             }
             else
@@ -48,7 +85,7 @@ namespace RaffleGUI.Model
             int currentNumber;
             int addedNumbersCount = to - from;
 
-            for (currentNumber = from; currentNumber <= to && currentNumber < rowsLength; currentNumber++)
+            for (currentNumber = from; currentNumber <= to && collectionIndex < rows.Count; currentNumber++)
             {
                 DataRow newRow = playNums.NewRow();
                 newRow["Numeros Jugando"] = currentNumber;
@@ -128,13 +165,24 @@ namespace RaffleGUI.Model
 
             return winners;
         }
-
-        //Adapted from: https://www.c-sharpcorner.com/blogs/binary-search-implementation-using-c-sharp1
-        //This adaptation returns the last visited index
-        //Only datarows with int values and 1 column
         public int BinarySearchTravelDataRowCollection(DataRowCollection dRCollection, int key, int min, int max, int prevMid)
         {
-            if (min > max)
+            if (playNums.Rows.Count == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return BinarySearchTravelDataRowCollectionRecursive(dRCollection, key, min, max, prevMid);
+            }
+        }
+
+            //Adapted from: https://www.c-sharpcorner.com/blogs/binary-search-implementation-using-c-sharp1
+            //This adaptation returns the last visited index
+            //Only datarows with int values and 1 column
+        public int BinarySearchTravelDataRowCollectionRecursive(DataRowCollection dRCollection, int key, int min, int max, int prevMid)
+        {
+            if (min >= max)
             {
                 return prevMid;
             }
