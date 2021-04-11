@@ -5,7 +5,7 @@
 * Descargar el ejecutable de la carpeta [executable](https://github.com/JuanF2019/raffle-gui/tree/main/RaffleGUI/RaffleGUI/executable)
 
 ## Requerimientos para abrir el proyecto
-* Descargar el código del repositorio.
+* Descargar el código del repositorio
 * Usar Visual Studio 2019 y abrir el archivo con la solución llamado RaffleGUI.sln
 * Lenguaje C# con Windows Forms en .NET Framework 4.7.2
 
@@ -15,10 +15,10 @@
 
 ## Capturas de pantalla e instrucciones de uso
 
-La pantalla de incio le da un breve contexto de la aplicación y de soñar despierto
+La pantalla de incio le da un breve contexto de la aplicación y de soñar despierto.
 ![Screenshot 1](Images/ss1.png)
 
-Al dar click en el botón "Acerca de" se abre una ventana nueva con información del autor y el enlace a la página de GitHub donde se encuentra guardado el proyecto
+Al dar click en el botón "Acerca de" se abre una ventana nueva con información del autor y el enlace a la página de GitHub donde se encuentra guardado el proyecto.
 ![Screenshot 2](Images/ss2.png)
 
 Para agregar números a la rifa de click en la parte superior derecha a la pestaña "Editar números". Si desea agregar varios números a la vez escriba dos numeros en los espacios de "Desde" y "Hasta" y se añadiran todos los numeros entre ambos incluyendo tambien los números digitados. Los números se agregan si no se encuentran en la lista de números.
@@ -30,7 +30,7 @@ Para añadir los números de click en añadir rango, un mensaje apareceráa dici
 Tambien si desea agregar o eliminar un número particular escriba en la casilla "Número particular" el número y de click en "Añadir Número" o "Eliminar Número".
 ![Screenshot 5](/Images/ss5.png)
 
-Para seleccionar ganadores de click en la pestaña "Jugar"
+Para seleccionar ganadores de click en la pestaña "Jugar".
 ![Screenshot 6](Images/ss6.png)
 
 Luego escriba el número de ganadores que desea escoger y de click en jugar. Una ventana aparecerá indicandole el primero de los números, de click en siguiente para ver el siguiente número y asi hasta llegar al ultimo. Una vez ahi de click en cerrar para terminar.
