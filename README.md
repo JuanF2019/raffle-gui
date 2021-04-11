@@ -2,7 +2,7 @@
 
 ## Requerimientos de Ejecución
 * Preferiblemente Windows 10
-* Descargar el ejecutable de la carpeta [executable](https://github.com/JuanF2019/raffle-gui/tree/main/RaffleGUI/RaffleGUI/executable)
+* Descargar el ejecutable de la carpeta [executable](https://github.com/JuanF2019/raffle-gui/tree/main/RaffleGUI/RaffleGUI/executable) o de la ultima versión del programa
 
 ## Requerimientos para abrir el proyecto
 * Descargar el código del repositorio
