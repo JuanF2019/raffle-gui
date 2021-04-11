@@ -188,12 +188,12 @@ namespace RaffleGUI.UserInterface
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(126, 239);
+            this.label3.Location = new System.Drawing.Point(98, 242);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(426, 13);
+            this.label3.Size = new System.Drawing.Size(439, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Está destinado principalmente para la rifa por los sueños de la fundación Soñar D" +
-    "espierto";
+            this.label3.Text = "Está destinado principalmente para la rifa por los sueños de la organización Soña" +
+    "r Despierto";
             // 
             // label2
             // 
