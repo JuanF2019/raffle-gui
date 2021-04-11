@@ -57,7 +57,7 @@ namespace RaffleGUI.Model
             int rowsLength = rows.Count;
             if (preRow == null)
             {
-                int index = BinarySearchTravelDataRowCollection(rows, num, 0, rowsLength, rowsLength / 2);
+                int index = BinarySearchTravelDataRowCollection(rows, num, 0, rowsLength-1, rowsLength-1 / 2);
 
                 DataRow newRow = playNums.NewRow();
                 newRow["Numeros Jugando"] = num;
@@ -101,7 +101,7 @@ namespace RaffleGUI.Model
         {
             DataRowCollection rows = playNums.Rows;
             int rowsLength = rows.Count;
-            int collectionIndex = BinarySearchTravelDataRowCollection(rows, from, 0, rowsLength, rowsLength / 2);
+            int collectionIndex = BinarySearchTravelDataRowCollection(rows, from, 0, rowsLength-1, rowsLength-1 / 2);
             int currentNumber;
             int addedNumbersCount = to - from + 1;
 
@@ -203,13 +203,16 @@ namespace RaffleGUI.Model
         //Only datarows with int values and 1 column
         public int BinarySearchTravelDataRowCollectionRecursive(DataRowCollection dRCollection, int key, int min, int max, int prevMid)
         {
+            Console.WriteLine("min = " + min + " max = " + max);
             if (min > max)
             {
                 return prevMid;
             }
             else
             {
+                
                 int mid = (min + max) / 2;
+                Console.WriteLine("mid = " + mid);
                 if (key == (int)dRCollection[mid][0])
                 {
                     return mid;

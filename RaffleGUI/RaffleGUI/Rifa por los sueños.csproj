@@ -49,7 +49,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>WhatsApp Image 2021-04-06 at 7.38.43 PM.ico</ApplicationIcon>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>4F97168F40E2D827FF759A1B3AAA51CB96DD1985</ManifestCertificateThumbprint>
@@ -144,6 +144,7 @@
     <None Include="Resources\WhatsApp Image 2021-04-06 at 7.38.43 PM %281%29.jpeg" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Icon.ico" />
     <Content Include="WhatsApp Image 2021-04-06 at 7.38.43 PM.ico" />
   </ItemGroup>
   <ItemGroup>

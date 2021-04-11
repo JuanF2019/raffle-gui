@@ -200,10 +200,10 @@ namespace RaffleGUI.UserInterface
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(98, 336);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(486, 13);
+            this.label2.Size = new System.Drawing.Size(499, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Puede editar los números en la pestaña \"Editar Números\" y seleccioar ganadroes en" +
-    " la pestaña jugar.";
+            this.label2.Text = "Puede editar los números en la pestaña \"Editar Números\" y seleccioar ganadores en" +
+    " la pestaña \"Jugar\".";
             // 
             // label1
             // 
@@ -318,7 +318,7 @@ namespace RaffleGUI.UserInterface
             this.delNumBtn.Name = "delNumBtn";
             this.delNumBtn.Size = new System.Drawing.Size(93, 23);
             this.delNumBtn.TabIndex = 3;
-            this.delNumBtn.Text = "Eliminar Numero";
+            this.delNumBtn.Text = "Eliminar Número";
             this.delNumBtn.UseVisualStyleBackColor = true;
             this.delNumBtn.Click += new System.EventHandler(this.delNumBtn_Click);
             // 
@@ -419,7 +419,7 @@ namespace RaffleGUI.UserInterface
             this.winnerSelLbl.Name = "winnerSelLbl";
             this.winnerSelLbl.Size = new System.Drawing.Size(124, 13);
             this.winnerSelLbl.TabIndex = 1;
-            this.winnerSelLbl.Text = "Seleccion de Ganadores";
+            this.winnerSelLbl.Text = "Selección de Ganadores";
             // 
             // winHisDataGridView
             // 
