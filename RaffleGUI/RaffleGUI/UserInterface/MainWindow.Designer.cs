@@ -200,10 +200,10 @@ namespace RaffleGUI.UserInterface
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(98, 336);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(499, 13);
+            this.label2.Size = new System.Drawing.Size(505, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Puede editar los números en la pestaña \"Editar Números\" y seleccioar ganadores en" +
-    " la pestaña \"Jugar\".";
+            this.label2.Text = "Puede editar los números en la pestaña \"Editar Números\" y seleccionar ganadores e" +
+    "n la pestaña \"Jugar\".";
             // 
             // label1
             // 
@@ -230,7 +230,7 @@ namespace RaffleGUI.UserInterface
             this.welcomeLbl.Name = "welcomeLbl";
             this.welcomeLbl.Size = new System.Drawing.Size(356, 13);
             this.welcomeLbl.TabIndex = 0;
-            this.welcomeLbl.Text = "Bienvenido. El programa le permite gestionar una rifa basada en numeros. ";
+            this.welcomeLbl.Text = "Bienvenido. El programa le permite gestionar una rifa basada en números. ";
             this.welcomeLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // editTab
