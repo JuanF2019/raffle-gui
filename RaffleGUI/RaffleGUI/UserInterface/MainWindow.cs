@@ -23,30 +23,42 @@ namespace RaffleGUI.UserInterface
 
         private void playButton_Click(object sender, EventArgs e)
         {
-            int winnersNum = Convert.ToInt32(winnersNumTxtBox.Text);
-
-            if (winnersNum <= raffleManager.PlayNums.Rows.Count)
+            try
             {
-                currentWinners = raffleManager.ThrowWinners(winnersNum);
+                int winnersNum = Convert.ToInt32(winnersNumTxtBox.Text);
 
-                WinnersWindow wWin = new WinnersWindow(currentWinners);
-                wWin.ShowDialog();
-
-                String winnersString = "";
-
-                foreach (int winner in currentWinners)
+                if (winnersNum <= raffleManager.PlayNums.Rows.Count && winnersNum >= 0)
                 {
-                    winnersString += winner + "  ";
-                }
+                    currentWinners = raffleManager.ThrowWinners(winnersNum);
 
-                DataRow newWinners = winnersHistory.NewRow();
-                newWinners["Ronda"] = raffleManager.Round;
-                newWinners["Ganadores"] = winnersString;
-                winnersHistory.Rows.Add(newWinners);
+                    WinnersWindow wWin = new WinnersWindow(currentWinners);
+                    wWin.ShowDialog();
+
+                    String winnersString = "";
+
+                    foreach (int winner in currentWinners)
+                    {
+                        winnersString += winner + "  ";
+                    }
+
+                    DataRow newWinners = winnersHistory.NewRow();
+                    newWinners["Ronda"] = raffleManager.Round;
+                    newWinners["Ganadores"] = winnersString;
+                    winnersHistory.Rows.Add(newWinners);
+                }
+                else if (winnersNum < 0)
+                {
+                    MessageBox.Show("No puede escoger un número de ganadores negativos o 0, por favor verifique el número", "Error al seleccionar ganadores", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                else
+                {
+                    MessageBox.Show("Hay más ganadores que números jugando, por favor agregue más números participantes", "Error al seleccionar ganadores", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (FormatException)
             {
-                MessageBox.Show("Hay más ganadores que numeros jugando, por favor agregue más números", "Error al seleccionar ganadores", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Por favor verique la escritura del número", "Error al seleccionar ganadores", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
