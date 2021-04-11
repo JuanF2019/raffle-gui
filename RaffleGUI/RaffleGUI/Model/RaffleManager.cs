@@ -8,7 +8,8 @@ namespace RaffleGUI.Model
     {
         private readonly Random ranNumGen;
         private readonly DataTable playNums;
-
+        private readonly DataTable winnersHistory;
+        private int round;
         public DataTable PlayNums
         {
             get
@@ -17,8 +18,21 @@ namespace RaffleGUI.Model
             }
         }
 
+        public DataTable WinnersHistory
+        {
+            get
+            {
+                return winnersHistory;
+            }
+        }
 
-
+        public int Round
+        {
+            get
+            {
+                return round;
+            }
+        }
 
         public RaffleManager()
         {
@@ -27,6 +41,12 @@ namespace RaffleGUI.Model
             playNums.Columns.Add(new DataColumn("Numeros Jugando"));
             playNums.Columns["Numeros Jugando"].DataType = typeof(Int32);
             playNums.PrimaryKey = new DataColumn[] { playNums.Columns["Numeros Jugando"] };
+            winnersHistory = new DataTable();
+            winnersHistory.Columns.Add("Ronda");
+            winnersHistory.Columns.Add("Ganadores");
+            winnersHistory.Columns["Ronda"].DataType = typeof(Int32);
+            winnersHistory.Columns["Ganadores"].DataType = typeof(String);
+            round = 0;
         }
 
         public bool AddNumber(int num)
@@ -36,9 +56,9 @@ namespace RaffleGUI.Model
             DataRowCollection rows = playNums.Rows;
             int rowsLength = rows.Count;
             if (preRow == null)
-            {                
+            {
                 int index = BinarySearchTravelDataRowCollection(rows, num, 0, rowsLength, rowsLength / 2);
-                
+
                 DataRow newRow = playNums.NewRow();
                 newRow["Numeros Jugando"] = num;
                 if (playNums.Rows.Count > 0)
@@ -82,8 +102,9 @@ namespace RaffleGUI.Model
             DataRowCollection rows = playNums.Rows;
             int rowsLength = rows.Count;
             int collectionIndex = BinarySearchTravelDataRowCollection(rows, from, 0, rowsLength, rowsLength / 2);
+            Console.WriteLine(collectionIndex);
             int currentNumber;
-            int addedNumbersCount = to - from;
+            int addedNumbersCount = to - from + 1;
 
             for (currentNumber = from; currentNumber <= to && collectionIndex < rows.Count; currentNumber++)
             {
@@ -153,21 +174,22 @@ namespace RaffleGUI.Model
                 DataRowCollection rows = playNums.Rows;
                 int rowsLength = rows.Count;
 
-                int winner = (int)rows[ranNumGen.Next(0, rowsLength + 1)][0];
+                int winner = (int)rows[ranNumGen.Next(0, rowsLength)][0];
 
                 while (winners.Contains(winner))
                 {
-                    winner = (int)rows[ranNumGen.Next(0, rowsLength + 1)][0];
+                    winner = (int)rows[ranNumGen.Next(0, rowsLength)][0];
                 }
 
                 winners.Add(winner);
             }
+            round++;
 
             return winners;
         }
         public int BinarySearchTravelDataRowCollection(DataRowCollection dRCollection, int key, int min, int max, int prevMid)
         {
-            if (playNums.Rows.Count == 0)
+            if (dRCollection.Count == 0)
             {
                 return 0;
             }
@@ -177,12 +199,12 @@ namespace RaffleGUI.Model
             }
         }
 
-            //Adapted from: https://www.c-sharpcorner.com/blogs/binary-search-implementation-using-c-sharp1
-            //This adaptation returns the last visited index
-            //Only datarows with int values and 1 column
+        //Adapted from: https://www.c-sharpcorner.com/blogs/binary-search-implementation-using-c-sharp1
+        //This adaptation returns the last visited index
+        //Only datarows with int values and 1 column
         public int BinarySearchTravelDataRowCollectionRecursive(DataRowCollection dRCollection, int key, int min, int max, int prevMid)
         {
-            if (min >= max)
+            if (min > max)
             {
                 return prevMid;
             }
@@ -203,6 +225,5 @@ namespace RaffleGUI.Model
                 }
             }
         }
-
     }
 }

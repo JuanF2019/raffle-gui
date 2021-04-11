@@ -29,6 +29,7 @@ namespace RaffleGUI.UserInterface
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WinnersWindow));
             this.nextWinBtn = new System.Windows.Forms.Button();
             this.finishBtn = new System.Windows.Forms.Button();
             this.winLbl = new System.Windows.Forms.Label();
@@ -36,7 +37,7 @@ namespace RaffleGUI.UserInterface
             // 
             // nextWinBtn
             // 
-            this.nextWinBtn.Location = new System.Drawing.Point(286, 293);
+            this.nextWinBtn.Location = new System.Drawing.Point(58, 146);
             this.nextWinBtn.Name = "nextWinBtn";
             this.nextWinBtn.Size = new System.Drawing.Size(75, 23);
             this.nextWinBtn.TabIndex = 0;
@@ -47,7 +48,7 @@ namespace RaffleGUI.UserInterface
             // finishBtn
             // 
             this.finishBtn.Enabled = false;
-            this.finishBtn.Location = new System.Drawing.Point(448, 293);
+            this.finishBtn.Location = new System.Drawing.Point(173, 146);
             this.finishBtn.Name = "finishBtn";
             this.finishBtn.Size = new System.Drawing.Size(75, 23);
             this.finishBtn.TabIndex = 1;
@@ -58,10 +59,10 @@ namespace RaffleGUI.UserInterface
             // winLbl
             // 
             this.winLbl.AutoSize = true;
-            this.winLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.winLbl.Location = new System.Drawing.Point(387, 198);
+            this.winLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.winLbl.Location = new System.Drawing.Point(125, 59);
             this.winLbl.Name = "winLbl";
-            this.winLbl.Size = new System.Drawing.Size(30, 24);
+            this.winLbl.Size = new System.Drawing.Size(49, 33);
             this.winLbl.TabIndex = 2;
             this.winLbl.Text = "##";
             // 
@@ -69,12 +70,13 @@ namespace RaffleGUI.UserInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(320, 204);
             this.Controls.Add(this.winLbl);
             this.Controls.Add(this.finishBtn);
             this.Controls.Add(this.nextWinBtn);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WinnersWindow";
-            this.Text = "Winners";
+            this.Text = "Ganadores";
             this.ResumeLayout(false);
             this.PerformLayout();
 
