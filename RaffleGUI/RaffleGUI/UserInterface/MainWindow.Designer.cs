@@ -44,6 +44,7 @@ namespace RaffleGUI.UserInterface
             this.aboutBtn = new System.Windows.Forms.Button();
             this.welcomeLbl = new System.Windows.Forms.Label();
             this.editTab = new System.Windows.Forms.TabPage();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.toRangeLbl = new System.Windows.Forms.Label();
             this.fromRangeLbl = new System.Windows.Forms.Label();
             this.toRangeTxtBox = new System.Windows.Forms.TextBox();
@@ -56,14 +57,13 @@ namespace RaffleGUI.UserInterface
             this.addRangeBtn = new System.Windows.Forms.Button();
             this.playTab = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.playButton = new System.Windows.Forms.Button();
             this.winnersNumTxtBox = new System.Windows.Forms.TextBox();
-            this.WinnerSelLbl = new System.Windows.Forms.Label();
+            this.winnerSelLbl = new System.Windows.Forms.Label();
             this.winHisDataGridView = new System.Windows.Forms.DataGridView();
             this.winnersHisLbl = new System.Windows.Forms.Label();
             this.playNumsDataGridView = new System.Windows.Forms.DataGridView();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -74,15 +74,15 @@ namespace RaffleGUI.UserInterface
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.editTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.playTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.winHisDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playNumsDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -235,7 +235,7 @@ namespace RaffleGUI.UserInterface
             // 
             // editTab
             // 
-            this.editTab.BackColor = System.Drawing.Color.Transparent;
+            this.editTab.BackColor = System.Drawing.Color.WhiteSmoke;
             this.editTab.Controls.Add(this.pictureBox4);
             this.editTab.Controls.Add(this.toRangeLbl);
             this.editTab.Controls.Add(this.fromRangeLbl);
@@ -253,6 +253,16 @@ namespace RaffleGUI.UserInterface
             this.editTab.Size = new System.Drawing.Size(640, 424);
             this.editTab.TabIndex = 1;
             this.editTab.Text = "Editar Numeros";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::RaffleGUI.Properties.Resources.WhatsApp_Image_2021_04_06_at_7_38_43_PM;
+            this.pictureBox4.Location = new System.Drawing.Point(525, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(115, 105);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 10;
+            this.pictureBox4.TabStop = false;
             // 
             // toRangeLbl
             // 
@@ -361,10 +371,11 @@ namespace RaffleGUI.UserInterface
             // 
             // splitContainer2.Panel1
             // 
+            this.splitContainer2.Panel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.splitContainer2.Panel1.Controls.Add(this.pictureBox5);
             this.splitContainer2.Panel1.Controls.Add(this.playButton);
             this.splitContainer2.Panel1.Controls.Add(this.winnersNumTxtBox);
-            this.splitContainer2.Panel1.Controls.Add(this.WinnerSelLbl);
+            this.splitContainer2.Panel1.Controls.Add(this.winnerSelLbl);
             // 
             // splitContainer2.Panel2
             // 
@@ -373,6 +384,16 @@ namespace RaffleGUI.UserInterface
             this.splitContainer2.Size = new System.Drawing.Size(640, 424);
             this.splitContainer2.SplitterDistance = 212;
             this.splitContainer2.TabIndex = 2;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::RaffleGUI.Properties.Resources.WhatsApp_Image_2021_04_06_at_7_38_43_PM;
+            this.pictureBox5.Location = new System.Drawing.Point(525, 0);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(115, 105);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
             // 
             // playButton
             // 
@@ -391,14 +412,14 @@ namespace RaffleGUI.UserInterface
             this.winnersNumTxtBox.Size = new System.Drawing.Size(100, 20);
             this.winnersNumTxtBox.TabIndex = 2;
             // 
-            // WinnerSelLbl
+            // winnerSelLbl
             // 
-            this.WinnerSelLbl.AutoSize = true;
-            this.WinnerSelLbl.Location = new System.Drawing.Point(8, 14);
-            this.WinnerSelLbl.Name = "WinnerSelLbl";
-            this.WinnerSelLbl.Size = new System.Drawing.Size(124, 13);
-            this.WinnerSelLbl.TabIndex = 1;
-            this.WinnerSelLbl.Text = "Seleccion de Ganadores";
+            this.winnerSelLbl.AutoSize = true;
+            this.winnerSelLbl.Location = new System.Drawing.Point(8, 14);
+            this.winnerSelLbl.Name = "winnerSelLbl";
+            this.winnerSelLbl.Size = new System.Drawing.Size(124, 13);
+            this.winnerSelLbl.TabIndex = 1;
+            this.winnerSelLbl.Text = "Seleccion de Ganadores";
             // 
             // winHisDataGridView
             // 
@@ -444,26 +465,6 @@ namespace RaffleGUI.UserInterface
             this.playNumsDataGridView.Size = new System.Drawing.Size(148, 450);
             this.playNumsDataGridView.TabIndex = 0;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::RaffleGUI.Properties.Resources.WhatsApp_Image_2021_04_06_at_7_38_43_PM;
-            this.pictureBox4.Location = new System.Drawing.Point(525, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(115, 105);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 10;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.Image = global::RaffleGUI.Properties.Resources.WhatsApp_Image_2021_04_06_at_7_38_43_PM;
-            this.pictureBox5.Location = new System.Drawing.Point(525, 0);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(115, 105);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
-            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -472,6 +473,7 @@ namespace RaffleGUI.UserInterface
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Rifa por los sueños";
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -485,6 +487,7 @@ namespace RaffleGUI.UserInterface
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.editTab.ResumeLayout(false);
             this.editTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.playTab.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
@@ -492,10 +495,9 @@ namespace RaffleGUI.UserInterface
             this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.winHisDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playNumsDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -523,7 +525,7 @@ namespace RaffleGUI.UserInterface
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.Button playButton;
         private System.Windows.Forms.TextBox winnersNumTxtBox;
-        private System.Windows.Forms.Label WinnerSelLbl;
+        private System.Windows.Forms.Label winnerSelLbl;
         private System.Windows.Forms.DataGridView winHisDataGridView;
         private System.Windows.Forms.Label winnersHisLbl;
         private System.Windows.Forms.Label label4;

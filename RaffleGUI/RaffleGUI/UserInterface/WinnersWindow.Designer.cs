@@ -76,6 +76,7 @@ namespace RaffleGUI.UserInterface
             this.Controls.Add(this.nextWinBtn);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WinnersWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ganadores";
             this.ResumeLayout(false);
             this.PerformLayout();

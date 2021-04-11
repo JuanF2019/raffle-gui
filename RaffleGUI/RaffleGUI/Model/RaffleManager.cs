@@ -102,7 +102,6 @@ namespace RaffleGUI.Model
             DataRowCollection rows = playNums.Rows;
             int rowsLength = rows.Count;
             int collectionIndex = BinarySearchTravelDataRowCollection(rows, from, 0, rowsLength, rowsLength / 2);
-            Console.WriteLine(collectionIndex);
             int currentNumber;
             int addedNumbersCount = to - from + 1;
 
