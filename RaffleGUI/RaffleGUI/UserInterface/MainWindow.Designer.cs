@@ -170,9 +170,9 @@ namespace RaffleGUI.UserInterface
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(143, 272);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(381, 13);
+            this.label4.Size = new System.Drawing.Size(394, 13);
             this.label4.TabIndex = 6;
-            this.label4.Text = "En el siguiente enlace puede consultar más información acerca de la fundación";
+            this.label4.Text = "En el siguiente enlace puede consultar más información acerca de la organización";
             // 
             // sDespiertoLinkLbl
             // 
@@ -188,12 +188,12 @@ namespace RaffleGUI.UserInterface
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(98, 242);
+            this.label3.Location = new System.Drawing.Point(76, 242);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(439, 13);
+            this.label3.Size = new System.Drawing.Size(527, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Está destinado principalmente para la rifa por los sueños de la organización Soña" +
-    "r Despierto";
+            this.label3.Text = "Está destinado principalmente para la rifa por los sueños de la organización sin " +
+    "ánimo de lucro Soñar Despierto";
             // 
             // label2
             // 

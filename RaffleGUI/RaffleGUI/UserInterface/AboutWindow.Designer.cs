@@ -41,6 +41,7 @@ namespace RaffleGUI.UserInterface
             this.label6 = new System.Windows.Forms.Label();
             this.closeAboutBtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // gitHubRepoLink
@@ -67,7 +68,7 @@ namespace RaffleGUI.UserInterface
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(203, 96);
+            this.label2.Location = new System.Drawing.Point(204, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 13);
             this.label2.TabIndex = 2;
@@ -76,7 +77,7 @@ namespace RaffleGUI.UserInterface
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(150, 123);
+            this.label3.Location = new System.Drawing.Point(150, 106);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 13);
             this.label3.TabIndex = 3;
@@ -85,7 +86,7 @@ namespace RaffleGUI.UserInterface
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(48, 146);
+            this.label4.Location = new System.Drawing.Point(48, 130);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(345, 13);
             this.label4.TabIndex = 4;
@@ -150,11 +151,21 @@ namespace RaffleGUI.UserInterface
             this.label7.TabIndex = 10;
             this.label7.Text = "Tambien el código si desea consultarlo";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(124, 153);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(176, 13);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "E-mail: juanfermartinez7@gmail.com";
+            // 
             // AboutWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(438, 272);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.closeAboutBtn);
             this.Controls.Add(this.label6);
@@ -190,5 +201,6 @@ namespace RaffleGUI.UserInterface
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button closeAboutBtn;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
     }
 }
